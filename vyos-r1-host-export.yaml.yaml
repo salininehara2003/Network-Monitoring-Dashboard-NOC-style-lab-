@@ -1,0 +1,36 @@
+zabbix_export:
+  version: '8.0'
+  host_groups:
+    - uuid: f7207ac9bba04982a9c8922e3eca134c
+      name: 'Network devices'
+  hosts:
+    - host: vyos-r1
+      name: vyos-r1
+      templates:
+        - name: 'Network Generic Device by SNMP'
+      groups:
+        - name: 'Network devices'
+      interfaces:
+        - type: SNMP
+          ip: 192.168.56.10
+          port: '161'
+          details:
+            community: <community>
+          interface_ref: if1
+      items:
+        - name: 'CPU utilization'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.2021.11.11.0
+          key: cpu.util.snmp
+          delay: 30s
+          value_type: FLOAT
+          units: '%'
+          preprocessing:
+            - type: JAVASCRIPT
+              parameters:
+                - 'return 100 - value;'
+          interface_ref: if1
+          triggers:
+            - expression: 'avg(/vyos-r1/cpu.util.snmp,2m)>80'
+              name: 'High CPU usage on vyos-r1'
+              priority: HIGH
