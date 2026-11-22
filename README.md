@@ -78,27 +78,27 @@ Notifications were delivered to Telegram when problems were raised.
 ## 6. Screenshots
 
 ### Dashboard
-![NOC Overview dashboard](screenshots/01-dashboard-healthy.png)
+![NOC Overview dashboard](screenshots/01-dashboard-healthy.png.png)
 
 ### SNMP host status and collected data
 ![Hosts with green SNMP icon](screenshots/02-hosts-snmp-green.png)
-![Latest data from VyOS](screenshots/09-latest-data-vyos.png)
+![Latest data from VyOS](screenshots/09-Latest%20data.png)
 
 ### Device unreachable alert
-![Unreachable alert](screenshots/08-alert-unreachable.png)
+![Unreachable alert](screenshots/08-Alert%20unreachable.png)
 
 ### High CPU alert
-![High CPU alert active](screenshots/03-alert-cpu-active.png)
-![High CPU alert resolved](screenshots/04-alert-cpu-resolved.png)
+![High CPU alert active](screenshots/03-High%20CPU%20utilization%20alert.png)
+![High CPU alert resolved](screenshots/04-High%20CPU%20utilization%20resolved.png)
 
 ### High bandwidth alert
-![Custom trigger created](screenshots/11-custom-trigger-created.png)
-![Interface traffic during the test](screenshots/07-bandwidth-bits-received.png)
-![High traffic alert active](screenshots/05-alert-bandwidth-active.png)
-![High traffic alert resolved](screenshots/06-alert-bandwidth-resolved.png)
+![Custom trigger created](screenshots/Create%20the%20trigger%20and%20added.png)
+![Interface traffic during the test](screenshots/07-High%20bits%20received%20value.png)
+![High traffic alert active](screenshots/05-High%20traffic%20alert.png)
+![High traffic alert resolved](screenshots/06-High%20traffic%20resolved.png)
 
 ### Telegram notification
-![Telegram alert message](screenshots/10-telegram-alert.png)
+![Telegram alert message](screenshots/10-Telegram%20message%20arrived.png)
 
 Images are stored in the `screenshots/` folder:
 
